@@ -9,13 +9,129 @@ and open the template in the editor.
 
 <Querys>
     
-    
+    <query id="create_database">
+        <![CDATA[
+            CREATE DATABASE timetablemanagement
+        ]]>
+    </query>
     
     <query id="Insert_workingdays_and_hours">
         <![CDATA[
             INSERT INTO work_day_hour (days_no, days, hour, mins)VALUES (?, ?, ?, ?)
         ]]>
     </query>
-        
     
+   
+     <query id="create_academic_semester">
+        <![CDATA[
+            create table academic(
+                id int AUTO_INCREMENT,
+                ys String,
+                
+                Constraint pk1 PRIMARY KEY (id)
+            )
+        ]]>
+    </query>
+    
+     <query id="Insert_academic_semester">
+        <![CDATA[
+            INSERT INTO academic (ys) VALUES (?)
+        ]]>
+    </query> 
+    
+    <query id="delete_academic_semester">
+        <![CDATA[
+            DELETE FROM academic
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    
+     <query id="Insert_degree_program">
+        <![CDATA[
+            INSERT INTO degree_program (dp) VALUES (?)
+        ]]>
+    </query>  
+    
+    <query id="delete_degree_program">
+        <![CDATA[
+            DELETE FROM degree_program
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    
+    <query id="Insert_group_number">
+        <![CDATA[
+            INSERT INTO groupNo (gNo) VALUES (?)
+        ]]>
+    </query>
+    
+    <query id="delete_group_number">
+        <![CDATA[
+            DELETE FROM groupNo
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="Insert_sub_group_number">
+        <![CDATA[
+            INSERT INTO subGroupNo (sGno) VALUES (?)
+        ]]>
+    </query>
+    
+    <query id="delete_sub_group_number">
+        <![CDATA[
+            DELETE FROM subGroupNo
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    
+    <query id="Insert_generated_group_id">
+        <![CDATA[
+            INSERT INTO group_id (gId) VALUES (?)
+        ]]>
+    </query>
+    
+    <query id="delete_group_id">
+        <![CDATA[
+            DELETE FROM group_id
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="Insert_sub_group_id">
+        <![CDATA[
+            INSERT INTO sub_group_id (subgId) VALUES (?)
+        ]]>
+    </query>
+    
+     <query id="delete_sub_group_id">
+        <![CDATA[
+            DELETE FROM sub_group_id
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="insert_tag">
+        <![CDATA[
+            INSERT INTO 
+                tag (tagId, subject , code, rTag)
+                values(?,?,?,?)
+		]]>
+    </query>
+    
+    <query id="get_tags">
+        <![CDATA[
+            SELECT * FROM tag
+        ]]>
+    </query>
+    
+     <query id="delete_tag">
+        <![CDATA[
+            DELETE FROM tag
+            WHERE id = ?
+        ]]>
+    </query>
 </Querys>
