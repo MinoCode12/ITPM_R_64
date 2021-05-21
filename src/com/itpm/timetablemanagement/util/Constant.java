@@ -22,6 +22,39 @@ public class Constant {
     public static final String GET_WORKING_HOUR_TABLE = "Get_workingdays_and_hours";
     public static final String GET_WORKING_HOUR_TABLE_BY_TYPE = "Get_workingdays_and_hours_by_type";
     
+   
+    public static final String CREATE_ACADEMIC_SEMESTER ="create_academic_semester";
+    public static final String INSERT_ACADEMIC_SEMESTER = "Insert_academic_semester";
+    public static final String DELETE_ACADEMIC_SEMESTER = "delete_academic_semester"; 
+    
+    public static final String CREATE_DEGREE_PROGRAM_TABLE ="create_degree_program_table";
+    public static final String INSERT_DEGREE_PROGRAM = "Insert_degree_program";
+    public static final String DELETE_DEGREE_PROGRAM ="delete_degree_program";
+    
+    public static final String CREATE_GROUP_NUMBER  ="create_group_number";
+    public static final String INSERT_GROUP_NUMBER = "Insert_group_number";
+    public static final String DELETE_GROUP_NUMBER  ="delete_group_number";
+    
+    public static final String CREATE_SUB_GROUP_NUMBER ="create_sub_group_number";
+    public static final String INSERT_SUB_GROUP_NUMBER = "Insert_sub_group_number";
+    public static final String DELETE_SUB_GROUP_NUMBER  ="delete_sub_group_number";
+    
+    public static final String CREATE_GROUP_ID ="generated_group_id";
+    public static final String INSERT_GROUP_ID ="Insert_generated_group_id";
+    public static final String GET_GROUP_ID = "Get_generated_group_id";
+    public static final String  DELETE_GROUP_ID = "delete_group_id";
+    
+    public static final String CREATE_SUB_GROUP_ID_TABLE ="generated_sub_group_id_table";
+    public static final String INSERT_SUB_GROUP_ID = "Insert_sub_group_id";
+    public static final String GET_SUB_GROUP_ID = "Get_generated_sub_group_id";
+    public static final String  DELETE_SUB_GROUP_ID = "delete_sub_group_id";
+    
+    public static final String INSERT_TAG = "insert_tag";
+    public static final String GET_TAG ="get_tags";
+    public static final String DELETE_TAG = "delete_tag";
+    
+    
+    
     public static final String QUERY = "query";
     public static final String QUERY_ID = "id";
     public static final String PROPERTIES = "timetablemanagement.properties";

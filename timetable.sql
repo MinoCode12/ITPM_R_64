@@ -1,0 +1,39 @@
+CREATE TABLE 'academic' (
+  'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+  'ys' varchar(45) DEFAULT NULL
+);
+
+CREATE TABLE `degree_program` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `dp` varchar(45) DEFAULT NULL
+) ;
+
+CREATE TABLE `groupNo` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `gNo` varchar(45) DEFAULT NULL
+) ;
+
+CREATE TABLE `subGroupNo` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `sGno` INTEGER DEFAULT NULL
+) ;
+
+CREATE TABLE `group_id` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `gId` varchar(45) DEFAULT NULL
+
+CREATE TABLE `sub_group_id` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `subgId` varchar(45) DEFAULT NULL
+) ;
+
+CREATE TABLE `tag` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `tagId` varchar(45) DEFAULT NULL,
+   `subject` varchar(45) DEFAULT NULL,
+    `code` varchar(45) DEFAULT NULL,
+    `rTag` varchar(45) DEFAULT NULL
+) ;
+
+
+
