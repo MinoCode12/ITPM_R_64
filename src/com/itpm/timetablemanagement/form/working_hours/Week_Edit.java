@@ -149,7 +149,7 @@ public class Week_Edit extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        cmb_num_of_days_WD = new javax.swing.JComboBox<String>();
+        cmb_num_of_days_WD = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         chk_mon = new javax.swing.JCheckBox();
         chk_tue = new javax.swing.JCheckBox();
@@ -158,7 +158,7 @@ public class Week_Edit extends javax.swing.JFrame {
         chk_fri = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        cmb_num_of_days_WE = new javax.swing.JComboBox<String>();
+        cmb_num_of_days_WE = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         chk_sat = new javax.swing.JCheckBox();
         chk_sun = new javax.swing.JCheckBox();
@@ -196,13 +196,13 @@ public class Week_Edit extends javax.swing.JFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(153, 153, 153));
 
-        jPanel3.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel3.setBackground(new java.awt.Color(0, 204, 102));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Number of Working Days");
 
         cmb_num_of_days_WD.setBackground(new java.awt.Color(255, 0, 0));
-        cmb_num_of_days_WD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5" }));
+        cmb_num_of_days_WD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
         cmb_num_of_days_WD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmb_num_of_days_WDActionPerformed(evt);
@@ -259,7 +259,7 @@ public class Week_Edit extends javax.swing.JFrame {
         jLabel6.setText("Number of Working Days");
 
         cmb_num_of_days_WE.setBackground(new java.awt.Color(255, 0, 0));
-        cmb_num_of_days_WE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2" }));
+        cmb_num_of_days_WE.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Working Days");
@@ -299,10 +299,11 @@ public class Week_Edit extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Minutes");
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 102));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 204));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("WEEKEND DETAILS");
 
@@ -319,9 +320,11 @@ public class Week_Edit extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 153));
+        jPanel5.setBackground(new java.awt.Color(0, 0, 204));
 
+        jLabel5.setBackground(new java.awt.Color(0, 0, 204));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("WEEKDAY DETAILS");
 
@@ -330,8 +333,8 @@ public class Week_Edit extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 992, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,7 +343,7 @@ public class Week_Edit extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        update_btn_wd.setBackground(new java.awt.Color(0, 153, 153));
+        update_btn_wd.setBackground(new java.awt.Color(153, 153, 153));
         update_btn_wd.setText("Update New Details");
         update_btn_wd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,7 +351,7 @@ public class Week_Edit extends javax.swing.JFrame {
             }
         });
 
-        reset_btn_wd.setBackground(new java.awt.Color(255, 51, 153));
+        reset_btn_wd.setBackground(new java.awt.Color(153, 153, 153));
         reset_btn_wd.setText("Reset");
         reset_btn_wd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -356,7 +359,7 @@ public class Week_Edit extends javax.swing.JFrame {
             }
         });
 
-        update_btn_we.setBackground(new java.awt.Color(0, 153, 153));
+        update_btn_we.setBackground(new java.awt.Color(153, 153, 153));
         update_btn_we.setText("Update");
         update_btn_we.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,7 +367,7 @@ public class Week_Edit extends javax.swing.JFrame {
             }
         });
 
-        reset_btn_we.setBackground(new java.awt.Color(255, 51, 153));
+        reset_btn_we.setBackground(new java.awt.Color(153, 153, 153));
         reset_btn_we.setText("Reset");
         reset_btn_we.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -439,9 +442,9 @@ public class Week_Edit extends javax.swing.JFrame {
                                         .addGap(239, 239, 239)
                                         .addComponent(txt_days_error, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGap(87, 87, 87)
-                                        .addComponent(update_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addGap(65, 65, 65)
+                                        .addComponent(update_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(reset_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -497,22 +500,19 @@ public class Week_Edit extends javax.swing.JFrame {
                             .addComponent(chk_sat, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chk_sun, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(spin_hour_WE, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(spin_min_WE, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(update_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reset_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)))
+                            .addComponent(reset_btn_we, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(spin_hour_WE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(spin_min_WE, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 312, Short.MAX_VALUE))
         );
 
