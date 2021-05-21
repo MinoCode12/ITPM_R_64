@@ -17,5 +17,114 @@ and open the template in the editor.
         ]]>
     </query>
         
+        
+     <query id="insert_lecturer">
+        <![CDATA[
+            INSERT INTO lecturer (name,lect_id,faculty,department,center,building,level,rank)VALUES(?,?,?,?,?,?,?,?)
+        ]]>
+    </query>
+    
+    <query id="get_lecturer">
+        <![CDATA[
+            SELECT * FROM lecturer
+        ]]>
+    </query>
+    
+    <query id="delete_lecturer">
+        <![CDATA[
+            DELETE FROM lecturer
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="update_lecturer">
+        <![CDATA[
+            UPDATE lecturer
+                set name = ?,
+                lect_id = ?,
+                faculty = ?,
+                department = ?,
+                center = ?,
+                building = ?,
+                level = ?,
+                rank = ?
+            
+            where id = ?
+       ]]>
+    </query>
+    
+     <query id="insert_subject">
+        <![CDATA[
+            INSERT INTO 
+                subject (off_year, off_sem, sub_name, sub_code, lec_hr, tute_hr, lab_hr, eva_hr)
+                values(?,?,?,?,?,?,?,?)
+		]]>
+    </query>
+    
+    <query id="get_subjects">
+        <![CDATA[
+            SELECT * FROM subject
+        ]]>
+    </query>
+    
+    <query id="delete_subject">
+        <![CDATA[
+            DELETE FROM subject
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="update_subject">
+        <![CDATA[
+            UPDATE subject
+                set off_year = ?,
+                off_sem = ?,
+                sub_name = ?,
+                sub_code = ?,
+                lec_hr = ?,
+                tute_hr = ?,
+                lab_hr = ?,
+                eva_hr = ?
+            
+            where id = ?
+       ]]>
+    </query>
+    
+     <query id="insert_session">
+        <![CDATA[
+            INSERT INTO 
+                session (lect, lect2, code, subject, tag, gID, nostudent, duration)
+                values(?,?,?,?,?,?,?,?)
+		]]>
+    </query>
+    
+    <query id="get_session">
+        <![CDATA[
+            SELECT * FROM session
+        ]]>
+    </query>
+    
+    <query id="delete_session">
+        <![CDATA[
+            DELETE FROM session
+            WHERE id = ?
+        ]]>
+    </query>
+    
+    <query id="update_session">
+        <![CDATA[
+            UPDATE session
+                set lect = ?,
+                lect2 = ?,
+                code = ?,
+                subject = ?,
+                tag = ?,
+                gID = ?,
+                nostudent = ?,
+                duration = ?
+            
+            where id = ?
+       ]]>
+    </query>
     
 </Querys>
