@@ -27,9 +27,9 @@
           <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblicon" min="-2" pref="41" max="-2" attributes="0"/>
+              <Component id="lbIcon" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblName" pref="213" max="32767" attributes="0"/>
+              <Component id="lbName" pref="181" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -38,9 +38,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblName" pref="21" max="32767" attributes="0"/>
-                  <Component id="lblicon" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="lbIcon" max="32767" attributes="0"/>
+                  <Component id="lbName" pref="27" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
@@ -52,11 +52,11 @@
   <SubComponents>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblicon">
+    <Component class="javax.swing.JLabel" name="lbIcon">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblName">
+    <Component class="javax.swing.JLabel" name="lbName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Manu Name Here"/>
+        <Property name="text" type="java.lang.String" value="Manu Name Here ..."/>
       </Properties>
     </Component>
   </SubComponents>

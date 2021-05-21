@@ -7,7 +7,7 @@ package com.itpm.timetablemanagement.main_manu;
 
 import java.awt.Frame;
 import javax.swing.JFrame;
-import manu.ManuItem;
+import manu.MenuItem;
 
 /**
  *
@@ -28,7 +28,7 @@ public class main_frame extends javax.swing.JFrame {
         
     }
     
-    private void addManu(ManuItem...manu){
+    private void addManu(MenuItem...manu){
         for(int i = 0; i <manu.length; i++){
             
         }

@@ -7,31 +7,30 @@ package manu;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Icon;
 
 /**
  *
  * @author gayan
  */
-public class ManuItem extends javax.swing.JPanel {
+public class MenuItem extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManuItem
+     * Creates new form MenuItem
      */
-    private ArrayList<ManuItem> subManu = new ArrayList<>();
+    private final ArrayList<MenuItem>subMenu = new ArrayList<>();
     
-    public ManuItem(Icon icon, String manuName, ManuItem...subManu) {
+    public MenuItem(Icon icon, String menuName, MenuItem...subMenu) {
         initComponents();
-        lblicon.setIcon(icon);
-        lblName.setText(manuName);
-        this.setSize(new Dimension(Integer.MAX_VALUE,45));
-        this.setMaximumSize(new Dimension(Integer.MAX_VALUE,45));
-        this.setMinimumSize(new Dimension(Integer.MAX_VALUE,45));
-        for(int i=0; i<subManu.length;i++){
-            this.subManu.add(subManu[i]);
+        lbIcon.setIcon(icon);
+        lbName.setText(menuName);
+        this.setSize(new Dimension(Integer.MAX_VALUE, 45));
+        this.setMaximumSize(new Dimension(Integer.MAX_VALUE, 45));
+        this.setMinimumSize(new Dimension(Integer.MAX_VALUE, 45));
+        for(int i=0; i<subMenu.length; i++){
+            this.subMenu.add(subMenu[i]);
         }
+        
     }
 
     /**
@@ -44,8 +43,8 @@ public class ManuItem extends javax.swing.JPanel {
     private void initComponents() {
 
         jSeparator1 = new javax.swing.JSeparator();
-        lblicon = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
+        lbIcon = new javax.swing.JLabel();
+        lbName = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -54,7 +53,7 @@ public class ManuItem extends javax.swing.JPanel {
             }
         });
 
-        lblName.setText("Manu Name Here");
+        lbName.setText("Manu Name Here ...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,18 +62,18 @@ public class ManuItem extends javax.swing.JPanel {
             .addComponent(jSeparator1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblicon, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
-                    .addComponent(lblicon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
@@ -84,55 +83,57 @@ public class ManuItem extends javax.swing.JPanel {
     private boolean showing = false;
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         if(showing){
-            hideManu();
+            hideMenu();
             showing = false;
         }else{
-            showManu();
+            showMenu();
             showing = true;
         }
     }//GEN-LAST:event_formMousePressed
 
-    private void showManu(){
-        new Thread(new Runnable() {
+
+    private void showMenu(){
+        new Thread(new Runnable(){
             @Override
-            public void run() {
-                for(int i=0; i<subManu.size();i++){
+            public void run(){
+                for(int i = 0; i < subMenu.size(); i++){
                     sleep();
-                    subManu.get(i).setVisible(true);
+                    subMenu.get(i).setVisible(true);
                 }
             }
         }).start();
     }
-
-    private void hideManu(){
-        new Thread(new Runnable() {
+    
+    private void hideMenu(){
+         new Thread(new Runnable(){
             @Override
-            public void run() {
-                for(int i=subManu.size()-1;i>=0;i--){
+            public void run(){
+                for(int i = subMenu.size() - 1; i >= 0; i--){
                     sleep();
-                    subManu.get(i).setVisible(false);
+                    subMenu.get(i).setVisible(true);
                 }
             }
-        }).start();        
+        }).start();       
     }
     
     private void sleep(){
-            try {
-                Thread.sleep(20);
-            } catch (Exception e) {
-            }
+        try{
+            Thread.sleep(20);
+        }catch(Exception e){
+            
         }
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblicon;
+    private javax.swing.JLabel lbIcon;
+    private javax.swing.JLabel lbName;
     // End of variables declaration//GEN-END:variables
 
     /**
-     * @return the subManu
+     * @return the subMenu
      */
-    public ArrayList<ManuItem> getSubManu() {
-        return subManu;
+    public ArrayList<MenuItem> getSubMenu() {
+        return subMenu;
     }
 }
